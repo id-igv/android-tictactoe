@@ -73,6 +73,7 @@ public class Game {
         return playerA.getSide() == side ? playerA : playerB;
     }
 
+    public Player getPlayerA() { return this.playerA; }
     public Player getPlayerB() { return this.playerB; }
 
     public Player getCurrentPlayer() {

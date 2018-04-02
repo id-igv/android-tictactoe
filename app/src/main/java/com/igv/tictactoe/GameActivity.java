@@ -124,6 +124,16 @@ public class GameActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        // if PVE and player chose side 'O' machine makes 1st move
+        if ((session.getPlayerB().getType() == Player.PLAYER_MACHINE)
+                && session.getPlayerB().getSide() == GameSettings.PLAYER_SIDE_X) {
+
+            int[] move = ((Machine) session.getPlayerB()).move(session.getField());
+            cellClick(move[0], move[1], findViewById(
+                    getResources().getIdentifier("cell" + move[0] + move[1] + "Btn", "id", getPackageName())
+            ));
+        }
     }
 
     public void showMessage(String text) {
@@ -143,14 +153,21 @@ public class GameActivity extends AppCompatActivity {
 
     public boolean proceedMove(int row, int col, View view) {
         // game continues
-        if(GameActivity.session.move(row, col)) {
-            return setCellImage(GameActivity.session.getLastMove(), view);
+        boolean canContinue = session.move(row, col);
+        boolean imageIsSet = setCellImage(GameActivity.session.getLastMove(), view);
+
+        if(canContinue) {
+            if (imageIsSet) { return true; }
+
+            return false;
         }
+
         // game ended
         int gameResult = GameActivity.session.gameResult();
 
         if (gameResult == Game.GAME_RESULT_UNKNOWN) {
             resetSession();
+
             return false; // something gone wrong (game ended but no result)
         }
 
@@ -158,6 +175,7 @@ public class GameActivity extends AppCompatActivity {
             // simple tie message
             showMessage("TIE");
             resetSession();
+
             return true;
         }
 
