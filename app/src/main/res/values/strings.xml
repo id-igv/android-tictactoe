@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="choose_text">Choose game settings</string>
+    <string name="current_side_text">Side:</string>
+</resources>

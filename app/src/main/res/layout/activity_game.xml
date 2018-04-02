@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/current_side_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_side_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gameFieldLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/row0Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/cell00Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:contentDescription="00 cell"
+                android:padding="0dp" />
+
+            <ImageButton
+                android:id="@+id/cell01Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+            <ImageButton
+                android:id="@+id/cell02Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/cell10Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+            <ImageButton
+                android:id="@+id/cell11Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+            <ImageButton
+                android:id="@+id/cell12Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/cell20Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+            <ImageButton
+                android:id="@+id/cell21Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+            <ImageButton
+                android:id="@+id/cell22Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_empty"
+                android:padding="0dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
